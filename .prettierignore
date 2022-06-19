@@ -105,3 +105,6 @@ dist
 
 # VS Code Workspace Settings
 .vscode
+
+# webpack build output
+dist
