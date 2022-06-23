@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack serve --hot --config webpack.dev.config.js",
+    "build": "webpack --config webpack.prod.config.js",
+    "build:serve": "webpack serve --hot --config webpack.prod.config.js",
     "eslint": "npx eslint './src/**/*.+(js)'",
     "stylelint": "npx stylelint './src/**/*.{css,scss,sass}'",
     "lint": "npx concurrently 'npm run eslint' 'npm run stylelint'",
@@ -28,21 +31,39 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "clean-webpack-plugin": "^4.0.0",
     "concurrently": "^7.2.2",
+    "css-loader": "^6.7.1",
     "eslint": "^8.18.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-node": "^4.1.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
+    "file-loader": "^6.2.0",
+    "handlebars-loader": "^1.7.2",
+    "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.0",
     "lint-staged": "^13.0.2",
+    "mini-css-extract-plugin": "^2.6.1",
     "prettier": "^2.7.1",
+    "sass": "^1.52.3",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
     "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-standard": "^26.0.0",
-    "stylelint-config-standard-scss": "^4.0.0"
+    "stylelint-config-standard-scss": "^4.0.0",
+    "terser-webpack-plugin": "^5.3.3",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2"
   },
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "handlebars": "^4.7.7"
   }
 }

@@ -103,8 +103,8 @@ dist
 # TernJS port file
 .tern-port
 
-# VS Code Workspace Settings
-.vscode
-
 # webpack build output
 dist
+
+# VS Code Workspace Settings
+.vscode
