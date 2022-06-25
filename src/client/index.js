@@ -1,5 +1,3 @@
-/* eslint-disable node/no-unsupported-features/es-syntax */
-
 // apply styles globally
 import './styles/style.scss';
 

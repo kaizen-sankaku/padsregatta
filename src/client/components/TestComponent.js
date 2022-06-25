@@ -1,5 +1,3 @@
-/* eslint-disable node/no-unsupported-features/es-syntax */
-
 import styles from './TestComponent.module.scss';
 
 console.log(...Object.keys(styles));

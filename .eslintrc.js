@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['airbnb-base', 'prettier', 'plugin:node/recommended'],
+  extends: ['airbnb-base', 'plugin:node/recommended', 'prettier'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -14,5 +14,12 @@ module.exports = {
     'no-console': 'off',
     'no-process-exit': 'off',
     'object-shorthand': 'off',
+    'node/no-unsupported-features/es-syntax': [
+      'warn',
+      {
+        version: 'latest',
+        ignores: ['modules'],
+      },
+    ],
   },
 };
