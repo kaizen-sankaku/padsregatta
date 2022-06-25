@@ -10,7 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const absolutePathToDist = path.resolve(__dirname, './dist');
 
 module.exports = {
-  entry: './src/client/index.js',
+  entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: absolutePathToDist,
@@ -58,7 +58,6 @@ module.exports = {
           'sass-loader',
         ],
       },
-
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
@@ -94,7 +93,7 @@ module.exports = {
       // meta: {
       //   description: 'Some description'
       // }
-      template: 'src/client/index.hbs',
+      template: 'src/index.hbs',
       description: 'Entrypoint for HTML',
     }),
   ],
