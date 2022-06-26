@@ -1,11 +1,6 @@
 const express = require('express');
 
-const x = 'something';
-
-console.log(x, express);
-
-console.log('testing1');
-console.log('testing2');
+const path = require('path');
 
 const app = express();
 
