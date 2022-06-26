@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack serve --hot --config webpack.dev.config.js",
+    "start": "nodemon src/server.js",
+    "dev": "webpack --watch --config webpack.dev.config.js",
+    "dev:serve": "webpack serve --hot --config webpack.dev.config.js",
     "build": "webpack --config webpack.prod.config.js",
     "build:serve": "webpack serve --config webpack.prod.config.js",
-    "start": "nodemon src/server.js",
     "eslint": "npx eslint './src/**/*.+(js)'",
     "stylelint": "npx stylelint './src/**/*.{css,scss,sass}'",
     "lint": "npx concurrently 'npm run eslint' 'npm run stylelint'",
