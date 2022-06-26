@@ -10,11 +10,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const absolutePathToDist = path.resolve(__dirname, './dist');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    about: './src/about.js',
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: absolutePathToDist,
-    publicPath: '',
+    publicPath: '/static/',
   },
   mode: 'development',
   devServer: {
@@ -33,6 +36,10 @@ module.exports = {
       {
         test: /\.(png|jpg|jpeg|gif)$/,
         use: ['file-loader'],
+      },
+      {
+        test: /\.txt/,
+        type: 'asset/source',
       },
       {
         test: /\.(css)$/,
@@ -89,12 +96,17 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Index',
-      // filename: 'subfolder/custom_filename.html',
-      // meta: {
-      //   description: 'Some description'
-      // }
-      template: 'src/index.hbs',
-      description: 'Entrypoint for HTML',
+      filename: 'index.html',
+      chunks: ['index'],
+      template: 'src/page-template.hbs',
+      description: 'Index Page',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'About',
+      filename: 'about.html',
+      chunks: ['about'],
+      template: 'src/page-template.hbs',
+      description: 'About Page',
     }),
   ],
 };

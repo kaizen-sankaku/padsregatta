@@ -12,11 +12,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const absolutePathToDist = path.resolve(__dirname, './dist');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    about: './src/about.js',
+  },
   output: {
-    filename: 'bundle.[contenthash].js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, './dist'),
-    publicPath: '',
+    publicPath: '/static/',
   },
   mode: 'production',
   // devServer not  needed for prod unless you want to verify how the js is bundles,
@@ -37,6 +40,10 @@ module.exports = {
       {
         test: /\.(png|jpg|jpeg|gif)$/,
         use: ['file-loader'],
+      },
+      {
+        test: /\.txt/,
+        type: 'asset/source',
       },
       {
         test: /\.(css)$/,
@@ -92,9 +99,18 @@ module.exports = {
     // }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Hello world',
-      template: 'src/index.hbs',
-      description: 'Some description',
+      title: 'Index',
+      filename: 'index.html',
+      chunks: ['index'],
+      template: 'src/page-template.hbs',
+      description: 'Index Page',
+    }),
+    new HtmlWebpackPlugin({
+      title: 'About',
+      filename: 'about.html',
+      chunks: ['about'],
+      template: 'src/page-template.hbs',
+      description: 'About Page',
     }),
   ],
 };
