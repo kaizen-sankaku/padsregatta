@@ -105,4 +105,5 @@ module.exports = {
       description: 'About Page',
     }),
   ],
+  devtool: 'source-map',
 };
