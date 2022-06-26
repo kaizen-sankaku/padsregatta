@@ -21,5 +21,13 @@ module.exports = {
         ignores: ['modules'],
       },
     ],
+    'node/no-unpublished-require': 'off', // not publishing this app so rule not needed
+    // 'import/no-extraneous-dependencies': 'warn',
+    'import/no-extraneous-dependencies': [
+      'warn',
+      {
+        devDependencies: ['*.config*'], // don't lint matching files
+      },
+    ],
   },
 };
