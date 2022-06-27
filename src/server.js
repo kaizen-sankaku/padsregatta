@@ -1,8 +1,11 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const path = require('path');
 const fs = require('fs');
 
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => {
   const pathToHtmlFile = path.resolve(__dirname, '../dist/index.html');
