@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   // res.send('Home Page');
 });
 
-app.get('/about/', (req, res) => {
+app.get('/about', (req, res) => {
   const pathToHtmlFile = path.resolve(__dirname, '../dist/about.html');
   const contentFromHtml = fs.readFileSync(pathToHtmlFile, 'utf-8');
   res.send(contentFromHtml);
