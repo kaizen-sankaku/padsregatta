@@ -1,8 +1,8 @@
 {
-  "name": "test-vscode-extensions",
+  "name": "padsregatta",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
     "start": "nodemon src/server.js",
     "dev": "webpack --watch --config webpack.dev.config.js",
