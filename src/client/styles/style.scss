@@ -1,0 +1,229 @@
+// global styles
+
+@use 'footer';
+@use 'navbar';
+
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap';
+
+body {
+  font-family: Roboto, sans-serif;
+  background-color: #f3f2f5;
+}
+
+/* sections */
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row {
+  content: '';
+  display: table;
+  clear: both;
+  height: 40vh;
+  width: 100%;
+}
+
+.toprow {
+  margin-top: 40px;
+}
+
+/* section-cards */
+
+.section-cards {
+  display: inline-flex;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 (0, 0, 0, 20%);
+  transition: 0.3s;
+  max-width: 100%;
+  border-radius: 5px;
+  margin-right: 30px;
+  padding: 10px;
+  background-color: white;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 (0, 0, 0, 20%);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.section-cards-title {
+  font-size: 0.8em;
+}
+
+.section-cards-details {
+  font-size: 0.5em;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.5em;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.active {
+  background-color: #ab6df7;
+}
+
+.float {
+  background-color: #ab6df7;
+  float: right;
+  margin-right: 200px;
+  max-width: 20%;
+  height: 50px;
+  font-size: 0.7em;
+}
+
+.join {
+  background-color: #ab6df7;
+}
+
+.pending {
+  background-color: #4a6572;
+}
+
+.final {
+  background-color: white;
+  color: #6b6b6a;
+  font-weight: 600;
+}
+
+.team {
+  background-color: #ab6df7;
+  color: white;
+  font-weight: 600;
+  width: 30%;
+  height: 20%;
+  top: 0;
+}
+
+/* form */
+
+form {
+  margin-top: 100px;
+}
+
+.form-row {
+  content: '';
+  display: table;
+  clear: both;
+  width: 70%;
+  margin: auto;
+}
+
+input[type='text'],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 0.6em;
+  display: inline-block;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-size: 0.7em;
+}
+
+input[type='submit'] {
+  background-color: #ab6df7;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  font-size: 0.6em;
+  margin-bottom: 40px;
+  margin-right: 25px;
+  width: 30%;
+  height: 40px;
+}
+
+input[type='submit']:hover {
+  background-color: #3700b3;
+}
+
+.col-25 {
+  float: left;
+  width: 15%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: right;
+  width: 75%;
+  margin-top: 6px;
+  margin-right: 50px;
+}
+
+.col-55 {
+  width: 300px;
+  position: relative;
+}
+
+.teammate {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  outline: none;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.teambutton {
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+  right: 0;
+  z-index: 2;
+  border: none;
+  height: 30px;
+  cursor: pointer;
+  color: white;
+  background-color: #1e90ff;
+  transform: translateX(2px);
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .float {
+    font-size: 0.5em;
+  }
+
+  .col-25,
+  .col-75,
+  input[type='submit'] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
