@@ -111,3 +111,6 @@ dist/
 
 # ignore all .ejs files
 **/*.ejs
+
+# Optional stylelint cache
+.stylelintcache

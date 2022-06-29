@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# run prettier serially after running eslint and stylelint to avoid race conditions
 npx lint-staged

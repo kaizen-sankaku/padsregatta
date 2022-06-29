@@ -109,3 +109,5 @@ dist/
 # VS Code Workspace Settings
 .vscode/
 
+# Optional stylelint cache
+.stylelintcache
