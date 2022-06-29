@@ -104,7 +104,10 @@ dist
 .tern-port
 
 # webpack build output
-dist
+dist/
 
 # VS Code Workspace Settings
-.vscode
+.vscode/
+
+# ignore all .ejs files
+**/*.ejs

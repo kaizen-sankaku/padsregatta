@@ -9,11 +9,11 @@
     "dev:serve": "webpack serve --hot --config webpack.dev.config.js",
     "build": "webpack --config webpack.prod.config.js",
     "build:serve": "webpack serve --config webpack.prod.config.js",
-    "eslint": "npx eslint './src/**/*.+(js)'",
+    "eslint": "npx eslint '**/*.+(js)'",
     "stylelint": "npx stylelint './src/**/*.{css,scss,sass}'",
     "lint": "npx concurrently 'npm run eslint' 'npm run stylelint'",
     "lint:fix": "npx concurrently 'npm run eslint -- --fix' 'npm run stylelint -- --fix'",
-    "prettier": "npx prettier src --check",
+    "prettier": "npx prettier '.' --check",
     "prettier:fix": "npm run prettier -- --write",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\" && husky install && npx husky set .husky/pre-commit 'npx lint-staged'"

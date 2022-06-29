@@ -9,6 +9,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
+  ignorePatterns: ['node_modules', 'dist'],
   rules: {
     'no-unused-vars': 'warn',
     'no-console': 'off',
