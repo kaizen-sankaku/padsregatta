@@ -1,5 +1,5 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const path = require('path');
 
@@ -72,10 +72,10 @@ module.exports = {
           },
         },
       },
-      {
-        test: /\.hbs$/,
-        use: ['handlebars-loader'],
-      },
+      // {
+      //   test: /\.hbs$/,
+      //   use: ['handlebars-loader'],
+      // },
     ],
   },
   plugins: [
@@ -90,20 +90,20 @@ module.exports = {
     //   ]
     // }),
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      title: 'Index',
-      filename: 'index.html',
-      chunks: ['index'],
-      template: 'src/page-template.hbs',
-      description: 'Index Page',
-    }),
-    new HtmlWebpackPlugin({
-      title: 'About',
-      filename: 'about.html',
-      chunks: ['about'],
-      template: 'src/page-template.hbs',
-      description: 'About Page',
-    }),
+    // new HtmlWebpackPlugin({
+    //   title: 'Index',
+    //   filename: 'index.html',
+    //   chunks: ['index'],
+    //   template: 'src/page-template.hbs',
+    //   description: 'Index Page',
+    // }),
+    // new HtmlWebpackPlugin({
+    //   title: 'About',
+    //   filename: 'about.html',
+    //   chunks: ['about'],
+    //   template: 'src/page-template.hbs',
+    //   description: 'About Page',
+    // }),
   ],
   devtool: 'source-map',
 };

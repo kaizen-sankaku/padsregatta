@@ -1,5 +1,5 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const TerserPlugin = require('terser-webpack-plugin'); // already included in production by webpack
 
@@ -76,10 +76,10 @@ module.exports = {
           },
         },
       },
-      {
-        test: /\.hbs$/,
-        use: ['handlebars-loader'],
-      },
+      // {
+      //   test: /\.hbs$/,
+      //   use: ['handlebars-loader'],
+      // },
     ],
   },
   plugins: [
@@ -94,19 +94,19 @@ module.exports = {
     //   ]
     // }),
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      title: 'Index',
-      filename: 'index.html',
-      chunks: ['index'],
-      template: 'src/page-template.hbs',
-      description: 'Index Page',
-    }),
-    new HtmlWebpackPlugin({
-      title: 'About',
-      filename: 'about.html',
-      chunks: ['about'],
-      template: 'src/page-template.hbs',
-      description: 'About Page',
-    }),
+    // new HtmlWebpackPlugin({
+    //   title: 'Index',
+    //   filename: 'index.html',
+    //   chunks: ['index'],
+    //   template: 'src/page-template.hbs',
+    //   description: 'Index Page',
+    // }),
+    // new HtmlWebpackPlugin({
+    //   title: 'About',
+    //   filename: 'about.html',
+    //   chunks: ['about'],
+    //   template: 'src/page-template.hbs',
+    //   description: 'About Page',
+    // }),
   ],
 };
