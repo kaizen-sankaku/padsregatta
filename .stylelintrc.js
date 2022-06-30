@@ -1,8 +1,8 @@
 module.exports = {
   extends: [
     'stylelint-config-standard',
-    'stylelint-config-syzygy-bem',
     'stylelint-config-standard-scss',
+    'stylelint-config-syzygy-bem',
     'stylelint-config-prettier-scss',
   ],
   plugins: ['stylelint-selector-bem-pattern'],
