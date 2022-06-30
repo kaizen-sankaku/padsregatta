@@ -9,12 +9,13 @@ const absolutePathToDist = path.resolve(__dirname, './dist');
 
 module.exports = {
   entry: {
-    index: './src/index.js',
-    about: './src/about.js',
+    main: './src/public/javascript/main.js',
+    about: './src/public/javascript/about.js',
   },
   output: {
-    filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, './dist'),
+    // filename: '[name].[contenthash].js',
+    filename: '[name].bundle.js',
+    path: absolutePathToDist,
     publicPath: '/static/',
   },
   mode: 'production',
@@ -26,7 +27,7 @@ module.exports = {
     },
     port: 9000,
     devMiddleware: {
-      index: 'index.html',
+      // index: 'index.html',
       writeToDisk: true,
     },
     compress: true,
@@ -85,7 +86,8 @@ module.exports = {
   plugins: [
     // new TerserPlugin(), // already included in production by webpack
     new MiniCssExtractPlugin({
-      filename: 'styles.[contenthash].css',
+      // filename: 'styles.[contenthash].css',
+      filename: '[name].styles.css',
     }),
     // new CleanWebpackPlugin({
     //   cleanOnceBeforeBuildPatterns: [

@@ -1,4 +1,5 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const path = require('path');
@@ -7,8 +8,8 @@ const absolutePathToDist = path.resolve(__dirname, './dist');
 
 module.exports = {
   entry: {
-    index: './src/index.js',
-    about: './src/about.js',
+    main: './src/public/javascript/main.js',
+    about: './src/public/javascript/about.js',
   },
   output: {
     filename: '[name].bundle.js',
@@ -22,7 +23,7 @@ module.exports = {
     },
     port: 9000,
     devMiddleware: {
-      index: 'index.html',
+      // index: 'index.html',
       writeToDisk: true,
     },
     compress: true,
@@ -88,6 +89,10 @@ module.exports = {
     //     '**/*', // remove all files in dist folder | default behavior of plugin
     //     path.join(process.cwd(), 'build/**/*')  // additional folder to clean
     //   ]
+    // }),
+    // new MiniCssExtractPlugin({
+    //   // filename: 'styles.[contenthash].css',
+    //   filename: 'styles.css',
     // }),
     new CleanWebpackPlugin(),
     // new HtmlWebpackPlugin({

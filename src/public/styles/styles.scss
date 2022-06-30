@@ -1,0 +1,19 @@
+// global styles
+@use 'footer';
+@use 'navbar';
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700';
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  color: blue;
+}
+
+.warning {
+  color: red;
+}

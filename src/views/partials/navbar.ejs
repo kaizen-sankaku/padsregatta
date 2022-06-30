@@ -1,0 +1,17 @@
+<header class="main-header">
+  <nav class="main-header__nav">
+    <ul class="main-header__item-list">
+      <!-- Icon is the same as user's home page -->
+      <li class="main-header__item"><a href='/user'>Icon</a></li>
+      <li class="main-header__item">
+        <a class="<%= path==='/teams-events' ? 'active' : ''%>" href="/teams-events">Teams & Events</a>
+      </li>
+      <li class="main-header__item">
+        <a class="<%= path==='/' ? 'active' : ''%>" href="/">About Us</a>
+      </li>
+      <li class="main-header__item">
+        <a class="<%= path==='/user/profile' ? 'active' : ''%>" href="/user/profile">My Profile</a>
+      </li>
+    </ul>
+  </nav>
+</header>
