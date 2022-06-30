@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta charset='utf-8' />
+    <link rel='stylesheet' type='text/css' href='./style.css' />
+
+  </head>
+  <body>
+
+    <div class='sidenav'>
+      <a><ion-icon name='person-circle-outline'></ion-icon></a>
+      <a href='./index.html'><ion-icon name='calendar-outline'></ion-icon></a>
+      <a href='./team.html'><ion-icon name='people-outline'></ion-icon></a>
+      <a href='#profile'><ion-icon name='settings-outline'></ion-icon></a>
+    </div>
+
+    <div class='main'>
+
+      <!--YOUR TEAMS SECTION START-->
+      <form>
+        <div class='form-row'>
+          <input class='submit' type='submit' value='Create Team' />
+          <!--Create button will allow creation of team and invitation of team members inputted-->
+        </div>
+        <div class='form-row'>
+          <div class='col-25'>
+            <label for='teamName'>Team Name</label>
+          </div>
+          <div class='col-75'>
+            <input
+              type='text'
+              id='teamName'
+              name='teamName'
+              placeholder='Your team name..'
+            />
+          </div>
+        </div>
+
+        <div class='form-row'>
+          <div class='col-25'>
+            <label for='sportName'>Sport Name</label>
+          </div>
+          <div class='col-75'>
+            <select id='sport' name='sport'>
+              <option value='option1'>Option 1</option>
+              <option value='option2'>Option 2</option>
+              <option value='option3'>Option 3</option>
+            </select>
+          </div>
+        </div>
+
+        <div class='form-row'>
+          <div class='col-25'>
+            <label for='lname'>Team Members</label>
+          </div>
+          <div class='col-75'>
+            <input
+              type='text'
+              id='teammate1'
+              name='teammate1'
+              placeholder='Teammate1..'
+            />
+          </div>
+          <div class='col-75'>
+            <input
+              type='text'
+              id='teammate2'
+              name='teammate2'
+              placeholder='Teammate2..'
+            />
+          </div>
+          <div class='col-75'>
+            <input
+              type='text'
+              id='teammate3'
+              name='teammate3'
+              placeholder='Teammate3..'
+            />
+          </div>
+        </div>
+
+      </form>
+      <!--JOIN A TEAM SECTION END-->
+    </div>
+
+    <script
+      type='module'
+      src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'
+    ></script>
+    <script
+      nomodule
+      src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'
+    ></script>
+  </body>
+</html>

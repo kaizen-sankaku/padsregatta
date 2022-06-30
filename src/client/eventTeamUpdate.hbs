@@ -1,0 +1,133 @@
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta charset='utf-8' />
+    <link rel='stylesheet' type='text/css' href='./style.css' />
+
+  </head>
+  <body>
+
+    <div class='sidenav'>
+      <a><ion-icon name='person-circle-outline'></ion-icon></a>
+      <a href='./index.html'><ion-icon name='calendar-outline'></ion-icon></a>
+      <a href='./team.html'><ion-icon name='people-outline'></ion-icon></a>
+      <a href='#profile'><ion-icon name='settings-outline'></ion-icon></a>
+    </div>
+
+    <div class='main'>
+
+      <!--YOUR TEAMS SECTION START-->
+      <form>
+
+        <div class='form-row'>
+          <div class='col-25'>
+            <label for='teamName'>Event Name</label>
+          </div>
+          <div class='col-75'>
+            <input
+              type='text'
+              id='eventName'
+              name='eventName'
+              value='Event Name'
+            />
+          </div>
+        </div>
+
+        <div class='form-row'>
+          <div class='col-25'>
+            <label for='eventDetails'>Event Details</label>
+          </div>
+          <div class='col-75'>
+            <input
+              type='text'
+              id='eventDetails'
+              name='eventDetails'
+              value='Event Details'
+            />
+          </div>
+        </div>
+
+        <div class='form-row form-categories'>
+          <div class='category'>
+            <input
+              type='checkbox'
+              id='category1'
+              name='category1'
+              value='category1'
+            />
+            <label for='eventDetails'>Category 1</label>
+            <textarea
+              type='text'
+              id='teammate1'
+              name='teammate1'
+              placeholder='Enter team members (separate by line)'
+            ></textarea>
+          </div>
+
+          <div class='category'>
+            <input
+              type='checkbox'
+              id='category2'
+              name='category2'
+              value='category2'
+            />
+            <label for='eventDetails'>Category 2</label>
+            <textarea
+              type='text'
+              id='teammate1'
+              name='teammate1'
+              placeholder='Enter team members (separate by line)'
+            ></textarea>
+          </div>
+
+          <div class='category'>
+            <input
+              type='checkbox'
+              id='category3'
+              name='category3'
+              value='category3'
+            />
+            <label for='eventDetails'>Category 3</label>
+            <textarea
+              type='text'
+              id='teammate1'
+              name='teammate1'
+              placeholder='Enter team members (separate by line)'
+            ></textarea>
+          </div>
+
+          <div class='category'>
+            <input
+              type='checkbox'
+              id='category4'
+              name='category4'
+              value='category4'
+            />
+            <label for='eventDetails'>Category 4</label>
+            <textarea
+              type='text'
+              id='teammate1'
+              name='teammate1'
+              placeholder='Enter team members (separate by line)'
+            ></textarea>
+          </div>
+        </div>
+
+        <div class='form-row'>
+          <input class='save' type='submit' value='Submit Details' />
+        </div>
+
+      </form>
+      <!--JOIN A TEAM SECTION END-->
+    </div>
+
+    <script
+      type='module'
+      src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'
+    ></script>
+    <script
+      nomodule
+      src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'
+    ></script>
+  </body>
+</html>

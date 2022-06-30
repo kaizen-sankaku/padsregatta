@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <meta charset='utf-8' />
+    <link rel='stylesheet' type='text/css' href='./style.css' />
+
+  </head>
+  <body>
+
+    <div class='sidenav'>
+      <a><ion-icon name='person-circle-outline'></ion-icon></a>
+      <a href='./index.html'><ion-icon name='calendar-outline'></ion-icon></a>
+      <a href='./team.html'><ion-icon name='people-outline'></ion-icon></a>
+      <a href='#profile'><ion-icon name='settings-outline'></ion-icon></a>
+    </div>
+
+    <div class='main'>
+
+      <!--YOUR TEAMS SECTION START-->
+      <form>
+        <div class='form-row'>
+          <input class='submit' type='submit' value='Export Team Info Sheet' />
+        </div>
+        <div class='form-row'>
+          <div class='col-25'>
+            <label for='teamName'>Team Name</label>
+          </div>
+          <div class='col-75'>
+            <input
+              type='text'
+              id='teamName'
+              name='teamName'
+              value='Team Name'
+            />
+          </div>
+        </div>
+
+        <div class='form-row'>
+          <div class='col-25'>
+            <label for='sportName'>Sport Name</label>
+          </div>
+          <div class='col-75'>
+            <input type='text' id='sport' name='sport' value='Sport Name' />
+          </div>
+        </div>
+
+        <div class='form-row'>
+          <div class='col-25'>
+            <label for='lname'>Team Members</label>
+          </div>
+
+          <div class='col-55'>
+            <input
+              class='teammate'
+              type='text'
+              id='teammate1'
+              name='teammate1'
+              value='Teammate1'
+            />
+            <button class='removebutton'>Remove</button>
+            <!--Remove status are for teammates that are already approved or have accepted the invite-->
+          </div>
+
+          <div class='col-55'>
+            <input
+              class='teammate'
+              type='text'
+              id='teammate1'
+              name='teammate1'
+              value='Teammate1'
+            />
+            <button class='optionapprovebutton'>Approve</button>
+            <button class='optiondenybutton'>Decline</button>
+            <!--this is if a team member who has not been invited joins a team-->
+          </div>
+
+          <div class='col-55'>
+            <input
+              class='teammate'
+              type='text'
+              id='teammate1'
+              name='teammate1'
+              value='Teammate1'
+            />
+            <button class='invitebutton'>Invite</button>
+            <!--allows the team creator to invite members after creating a team-->
+          </div>
+
+        </div>
+        <div class='form-row'>
+          <input class='save' type='submit' value='Save Team' />
+        </div>
+
+      </form>
+      <!--JOIN A TEAM SECTION END-->
+    </div>
+
+    <script
+      type='module'
+      src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'
+    ></script>
+    <script
+      nomodule
+      src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'
+    ></script>
+  </body>
+</html>
