@@ -1,15 +1,138 @@
-<!-- NO LONGER NEEDED SINCE USING HANDLEBARS -->
-
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../styles/style.scss" />
-    <title>Document</title>
+    <meta charset='utf-8' />
+    <title>{{htmlWebpackPlugin.options.title}}</title>
+    <meta
+      name='description'
+      content='{{htmlWebpackPlugin.options.description}}'
+    />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
   </head>
   <body>
-    <div class="container"></div>
+    <div id='app'>
+
+      {{! apply styles from './styles/style.scss' direct to index.hbs }}
+      <div class='sidenav'>
+        <a><ion-icon name='person-circle-outline'></ion-icon></a>
+        <a href='./index.html'><ion-icon name='calendar-outline'></ion-icon></a>
+        <a href='./team.html'><ion-icon name='people-outline'></ion-icon></a>
+        <a href='#profile'><ion-icon name='settings-outline'></ion-icon></a>
+      </div>
+
+      <div class='main'>
+
+        <!--YOUR EVENTS SECTION START-->
+        <div class='row toprow'>
+          <div class='section-title'>
+            <h3>Your events</h3>
+          </div>
+
+          <!--EVENT CARD START-->
+          <div class='section-cards'>
+            <div class='card'>
+              <div class='container'>
+                <p class='section-cards-title'><b>Event Title</b></p>
+                <p class='section-cards-details'>
+                  Date: MM-DD-YYYY
+                  <br />
+                  Location: Quezon City
+                </p>
+
+                <button class='button active'>Update Team</button>
+              </div>
+            </div>
+
+            <div class='card'>
+              <div class='container'>
+                <p class='section-cards-title'><b>Event Title</b></p>
+                <p class='section-cards-details'>
+                  Date: MM-DD-YYYY
+                  <br />
+                  Location: Quezon City
+                </p>
+
+                <button class='button pending'>Pending Approval</button>
+              </div>
+            </div>
+
+            <div class='card'>
+              <div class='container'>
+                <p class='section-cards-title'><b>Event Title</b></p>
+                <p class='section-cards-details'>
+                  Date: MM-DD-YYYY
+                  <br />
+                  Location: Quezon City
+                </p>
+
+                <button class='button final'>Details submitted</button>
+              </div>
+            </div>
+          </div>
+          <!--EVENT CARD END-->
+        </div>
+        <!--YOUR EVENTS SECTION END-->
+
+        <!--PARTICIPATE IN EVENTS SECTION START-->
+        <div class='row'>
+          <div class='section-title'>
+            <h3>Participate in an event</h3>
+          </div>
+
+          <!--EVENT CARD START-->
+          <div class='section-cards'>
+            <div class='card'>
+              <div class='container'>
+                <p class='section-cards-title'><b>Event Title</b></p>
+                <p class='section-cards-details'>
+                  Date: MM-DD-YYYY
+                  <br />
+                  Location: Quezon City
+                </p>
+
+                <button class='button join'>Join</button>
+              </div>
+            </div>
+
+            <div class='card'>
+              <div class='container'>
+                <p class='section-cards-title'><b>Event Title</b></p>
+                <p class='section-cards-details'>
+                  Date: MM-DD-YYYY
+                  <br />
+                  Location: Quezon City
+                </p>
+
+                <button class='button join'>Join</button>
+              </div>
+            </div>
+
+            <div class='card'>
+              <div class='container'>
+                <p class='section-cards-title'><b>Event Title</b></p>
+                <p class='section-cards-details'>
+                  Date: MM-DD-YYYY
+                  <br />
+                  Location: Quezon City
+                </p>
+
+                <button class='button join'>Join</button>
+              </div>
+            </div>
+          </div>
+          <!--EVENT CARD END-->
+
+        </div>
+        <!--PARTICIPATE IN EVENTS SECTION END-->
+      </div>
+
+    </div>
+    <script
+      type='module'
+      src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'
+    ></script>
+    <script
+      nomodule
+      src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'
+    ></script>
   </body>
 </html>
