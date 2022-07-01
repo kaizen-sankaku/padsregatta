@@ -114,3 +114,6 @@ dist/
 
 # Optional stylelint cache
 .stylelintcache
+
+# husky folder
+.husky/
