@@ -38,5 +38,12 @@ main {
 .main-header__item a:hover,
 .main-header__item a:active,
 .main-header__item a.active {
-  color: #9042e9;
+  // color: #9042e9;
+  background: linear-gradient(to right, #da22ff, #9733ee);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+ion-icon {
+  font-size: 1.8rem;
 }

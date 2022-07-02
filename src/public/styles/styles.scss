@@ -1,13 +1,17 @@
 // global styles
 @use 'footer';
 @use 'navbar';
+@use 'card';
+@use 'button';
 
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700';
+@import 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap';
 
 body {
   padding: 0;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+  background-color: #f3f2f5;
 }
 
 h1 {
@@ -16,4 +20,48 @@ h1 {
 
 .warning {
   color: red;
+}
+
+/* sections */
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row {
+  content: '';
+  display: table;
+  clear: both;
+  height: 40vh;
+  width: 100%;
+}
+
+.toprow {
+  margin-top: 40px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .float {
+    font-size: 0.5em;
+  }
+
+  .col-25,
+  .col-75,
+  input[type='submit'] {
+    width: 100%;
+    margin-top: 0;
+  }
 }

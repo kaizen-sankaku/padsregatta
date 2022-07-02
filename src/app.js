@@ -4,8 +4,8 @@ const path = require('path');
 
 const siteRoutes = require('./routes/site');
 const userRoutes = require('./routes/user');
-// const teamRoutes = require('./routes/team');
-// const eventRoutes = require('./routes/event');
+const teamsRoutes = require('./routes/teams');
+const eventRoutes = require('./routes/event');
 
 const app = express();
 
@@ -19,8 +19,8 @@ app.use('/static', express.static(path.resolve(__dirname, '../dist')));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/user', userRoutes);
-// app.use('/team', teamRoutes);
-// app.use('/event', eventRoutes);
+app.use('/teams', teamsRoutes);
+app.use('/event', eventRoutes);
 app.use(siteRoutes);
 
 // catch-all for unmatched routes

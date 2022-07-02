@@ -2,15 +2,25 @@
   <nav class="main-header__nav">
     <ul class="main-header__item-list">
       <!-- Icon is the same as user's home page -->
-      <li class="main-header__item"><a href='/user'>Icon</a></li>
       <li class="main-header__item">
-        <a class="<%= path==='/teams-events' ? 'active' : ''%>" href="/teams-events">Teams & Events</a>
+        <a class="<%= path==='/user' ? 'active' : ''%>" href='/user'>
+          <ion-icon name='person-circle-outline'></ion-icon>
+        </a>
       </li>
       <li class="main-header__item">
+        <a class="<%= path==='/teams/list' ? 'active' : ''%>" href="/teams/list">Teams</a>
+      </li>
+      <li class="main-header__item">
+        <a class="<%= path==='/event' ? 'active' : ''%>" href="/event">Event</a>
+      </li>
+      <!-- <li class="main-header__item">
         <a class="<%= path==='/' ? 'active' : ''%>" href="/">About Us</a>
-      </li>
+      </li> -->
       <li class="main-header__item">
-        <a class="<%= path==='/user/profile' ? 'active' : ''%>" href="/user/profile">My Profile</a>
+        <a class="<%= path==='/user/profile' ? 'active' : ''%>" href="/user/profile">
+          <ion-icon name='settings-outline'></ion-icon>
+          <span>Profile</span>
+        </a>
       </li>
     </ul>
   </nav>

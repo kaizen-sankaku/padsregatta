@@ -2,10 +2,10 @@ const express = require('express');
 
 const router = express.Router();
 
-router.get('', (req, res) => {
-  res.render('pages/event', {
+router.get('/list', (req, res) => {
+  res.render('pages/teams/list', {
     pageTitle: `Teams`,
-    path: '/event',
+    path: '/teams/list',
   });
 });
 
