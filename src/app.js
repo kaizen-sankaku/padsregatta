@@ -6,7 +6,6 @@ const siteRoutes = require('./routes/site');
 const userRoutes = require('./routes/user');
 const teamsRoutes = require('./routes/teams');
 const eventRoutes = require('./routes/event');
-const loginRoutes = require('./routes/login');
 
 const app = express();
 
@@ -22,7 +21,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/user', userRoutes);
 app.use('/teams', teamsRoutes);
 app.use('/event', eventRoutes);
-app.use('/login', loginRoutes);
 app.use(siteRoutes);
 
 // catch-all for unmatched routes

@@ -10,6 +10,13 @@ const router = express.Router();
 //   res.send(contentFromHtml);
 // });
 
+router.get('/login-register', (req, res) => {
+  res.render('pages/login-register', {
+    pageTitle: `Login/Register`,
+    path: '/login-register',
+  });
+});
+
 router.get('/teams-events', (req, res) => {
   // res.send(`
   //   <h1>Teams List</h1>
