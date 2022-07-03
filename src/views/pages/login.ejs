@@ -7,73 +7,70 @@
   <div id='app'>
 
     <%- include('../partials/navbar.ejs') %>
+    <div class="main">
+        <div class="login">
+          <div class="card-login">
+            <div>
+              <p class="header">Registration</p>
+              <p class="subheading">Don't have an account? Register below.</p>
+            </div>
 
-    <div class="login-container">
-      <div class="login">
-        <div class="card-login">
-          <div>
-            <p class="header">Registration</p>
-            <p class="subheading">Don't have an account? Register below.</p>
+            <div class="card-login-body">
+              <form id="myForm" action = "connect.php" method = "post">
+                <div class=form-group>
+                  <label for="fname">First Name</label></br>
+                  <input id="fname" name = "fname" type="text" required>
+
+                </div>
+
+                <div class=form-group>
+                  <label for="lname">Last Name</label></br>
+                  <input id="lname" name = "lname" type="text" required>
+
+                </div>
+
+                <div class=form-group>
+                  <label for="email">Email</label></br>
+                  <input id="email" name = "email" type="text" required>
+
+                </div>
+
+                <div class=form-group>
+                  <label for="password">Password</label></br>
+                  <input id="password" name = "password" type="password" required>
+
+                </div>
+
+                <button class="button-login" type="submit" onclick="submitForm">Submit</button>
+              </form>
+            </div>
           </div>
 
-          <div class="card-login-body">
-            <form id="myForm" action = "connect.php" method = "post">
-              <div class=form-group>
-                <label for="fname">First Name</label></br>
-                <input id="fname" name = "fname" type="text" required>
-                <p id="fname2"></p>
-              </div>
+          <div class="card-login">
+            <div>
+              <p class="header">Login</p>
+              <p class="subheading">Have an account? Enter your credentials</p>
+            </div>
 
-              <div class=form-group>
-                <label for="lname">Last Name</label></br>
-                <input id="lname" name = "lname" type="text" required>
-                <p id="lname2"></p>
-              </div>
+            <div class="card-login-body">
+              <form id="myForm" action = "login.php" method = "post">
+                <div class=form-group>
+                  <label for="email">Email</label></br>
+                  <input id="email" name = "email" type="text" required>
 
-              <div class=form-group>
-                <label for="email">Email</label></br>
-                <input id="email" name = "email" type="text" required>
-                <p id="email2"></p>
-              </div>
+                </div>
 
-              <div class=form-group>
-                <label for="password">Password</label></br>
-                <input id="password" name = "password" type="password" required>
-                <p id="pw2"></p>
-              </div>
+                <div class=form-group>
+                  <label for="password">Password</label></br>
+                  <input id="password" name = "password" type="password" required>
 
-              <button type="submit" onclick="submitForm">Submit</button>
-            </form>
+                </div>
+
+                <button class="button-login" type="submit" onclick="login" class="loginbutton">LogIn</button>
+              </form>
+            </div>
           </div>
         </div>
-
-        <div class="card-login">
-          <div>
-            <p class="header">Login</p>
-            <p class="subheading">Have an account? Enter your credentials</p>
-          </div>
-
-          <div class="card-login-body">
-            <form id="myForm" action = "login.php" method = "post">
-              <div class=form-group>
-                <label for="email">Email</label></br>
-                <input id="email" name = "email" type="text" required>
-                <p id="email2"></p>
-              </div>
-
-              <div class=form-group>
-                <label for="password">Password</label></br>
-                <input id="password" name = "password" type="password" required>
-                <p id="pw2"></p>
-              </div>
-
-              <button type="submit" onclick="login" class="loginbutton">LogIn</button>
-            </form>
-          </div>
         </div>
-
-      </div>
-</div>
-
 
     <%- include('../partials/footer.ejs') %>

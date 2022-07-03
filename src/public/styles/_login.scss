@@ -1,16 +1,11 @@
 /* login */
-.login-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
 .login {
   display: inline-flex;
-  width: 70%;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  margin: 5%;
+  margin-left: 15%;
 }
 
 .card-login {
@@ -19,18 +14,36 @@
   border-radius: 5px;
   padding: 30px;
   background-color: white;
-}
-
-.card-login-body {
-  width: 100%;
+  border: solid 1px rgba(#dbdad7, 0.5);
+  box-shadow: 3px rgba(#dbdad7, 0.5);
 }
 
 .header {
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 600;
   margin-bottom: 0;
 }
 
 .subheading {
-  font-size: 0.9em;
+  font-size: 0.5em;
+}
+
+.card-login:hover {
+  background: linear-gradient(to right, #da22ff, #9733ee);
+
+  label {
+    color: white;
+  }
+
+  .header {
+    color: white;
+  }
+
+  .subheading {
+    color: white;
+  }
+}
+
+.card-login-body {
+  width: 100%;
 }

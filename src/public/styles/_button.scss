@@ -11,6 +11,17 @@
   width: 100%;
 }
 
+.button-login {
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.5em;
+  border-radius: 4px;
+  background: linear-gradient(to right, #005c97, #363795);
+}
+
 button:hover {
   // background-color: #3700b3;
   // background: linear-gradient(to right, #8e2de2, #4a00e0);
