@@ -1,12 +1,9 @@
 const express = require('express');
 
+const { getTeams } = require('../controllers/teams');
+
 const router = express.Router();
 
-router.get('/list', (req, res) => {
-  res.render('pages/teams/list', {
-    pageTitle: `Teams`,
-    path: '/teams/list',
-  });
-});
+router.get('/list', getTeams);
 
 module.exports = router;
