@@ -1,12 +1,9 @@
 const express = require('express');
 
+const { getEvent } = require('../controllers/event');
+
 const router = express.Router();
 
-router.get('', (req, res) => {
-  res.render('pages/event', {
-    pageTitle: `Teams`,
-    path: '/event',
-  });
-});
+router.get('/mandanibaydbregatta2022', getEvent);
 
 module.exports = router;

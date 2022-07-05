@@ -11,13 +11,16 @@
     <div class="main">
 
       <div class='row toprow'>
-        <h3>Mandani Bay Dragon Boat Regatta 2022</h3>
+        <h3><%= event.name %></h3>
+        <span><%= event.date %></span>
+        <span><%= event.description %></span>
         <div class='section-title'></div>
         <div class='section-cards'></div>
         <br>
         <span>Registered teams:</span>
-        <br>
         <span>Information Bulletins:</span>
+        <br>
+        <span>DATA: <%= JSON.stringify(event) %></span>
       </div>
 
     </div>
