@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "start": "nodemon --ext '*.ejs' src/app.js",
+    "start": "nodemon --ext js,ejs src/app.js",
     "dev": "webpack --watch --config webpack.dev.config.js",
     "dev:serve": "webpack serve --hot --config webpack.dev.config.js",
     "build": "webpack --config webpack.prod.config.js",
