@@ -1,13 +1,11 @@
-<!--TEAM CARD START-->
 <div class='card'>
   <div class='container'>
     <p class='section-cards-title'><b>Team Name</b></p>
-    <p class='section-cards-details'>
-      Members: 6
-      <br />
-      Sport: Rowing
-    </p>
+    <div class='section-cards-details'>
+      <span>Location: <%= team.location %></span>
+      <span>Manager: <%= team.manager %></span>
+      <span>Members: <%= team.members.length %></span>
+    </div>
     <button class="button join">Join</button>
   </div>
 </div>
-<!--TEAM CARD END-->

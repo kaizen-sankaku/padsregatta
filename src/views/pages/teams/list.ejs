@@ -17,10 +17,15 @@
         <div class='section-title'>
           <h3>Explore All Teams</h3>
         </div>
+        <% if (teams.length > 0) { %>
         <div class='section-cards'>
-          <%- include('../../partials/team-card.ejs') %>
-          <%- include('../../partials/team-card.ejs') %>
+          <% for (let team of teams ) { %>
+          <%- include('../../partials/team-card.ejs', {team: team}) %>
+          <% } %>
         </div>
+        <% } else { %>
+        <h1>No Teams Yet.</h1>
+        <% } %>
         <div>
           <a href="">See more...</a>
         </div>
