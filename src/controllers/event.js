@@ -7,9 +7,9 @@ if (event.date_from === event.date_to) {
 }
 
 exports.getEvent = (req, res) => {
-  res.render('pages/event', {
+  res.render('pages/event/event', {
     event: event,
-    pageTitle: `Event`,
+    pageTitle: 'Event',
     path: '/event/mandanibaydbregatta2022',
   });
 };
