@@ -1,23 +1,11 @@
 const express = require('express');
-const event = require('../models/event');
-const teams = require('../models/team');
+
+const { getUserProfile, getUserWall } = require('../controllers/user');
 
 const router = express.Router();
 
-router.get('/profile', (req, res) => {
-  res.render('pages/user/profile', {
-    pageTitle: `User Profile`,
-    path: '/user/profile',
-  });
-});
+router.get('/profile', getUserProfile);
 
-router.get('', (req, res) => {
-  res.render('pages/user/user', {
-    pageTitle: `User's Wall`,
-    path: '/user',
-    event: event,
-    team: teams[0],
-  });
-});
+router.get('/wall', getUserWall);
 
 module.exports = router;

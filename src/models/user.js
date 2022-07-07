@@ -1,1 +1,3 @@
-exports.users = [{ name: 'John Doe' }];
+const users = [{ name: 'John Doe' }];
+
+module.exports = users;

@@ -8,7 +8,13 @@
 
     <%- include('../../partials/navbar.ejs') %>
 
-    <h1>User Profile</h1>
+    <div class="main">
+      <h1>User Profile</h1>
+      <span><%= user.name %></span>
+      <br>
+    </div>
+
+    <span><i>user: <%= JSON.stringify(user) %></i></span>
 
   </div>
 
