@@ -11,26 +11,42 @@
     <div class="main">
 
       <div class='row toprow'>
+        <button class='button float'>Join events</button>
         <div class='section-title'>
-          <h3>Registered Event:</h3>
+          <h3>Your events: </h3>
         </div>
+      </div>
+
+      <div class='row cardrow'>
+        <!--display this section when no event category is available-->
+        <!--<div class="section-nodata">
+          <p>no events available</p>
+        </div>-->
         <div class='section-cards'>
           <%- include('../../partials/event-card.ejs') %>
+          <%- include('../../partials/event-card.ejs') %>
         </div>
-        <button class='button float'>Register for Event</button>
+      </div>
 
+      <div class="row toprow">
+        <button class='button float'>Create A Team</button>
         <div class='section-title'>
-          <h3>Your team / You have no team:</h3>
+          <h3>Your teams: </h3>
         </div>
+      </div>
+      <div class="row cardrow">
+        <!--display this section when no teams are available-->
+        <!--<div class="section-nodata">
+          <p>no teams created</p>
+        </div>-->
         <div class='section-cards'>
           <%- include('../../partials/team-card.ejs') %>
+          <%- include('../../partials/team-card.ejs') %>
         </div>
-        <button class='button float'>Create A Team</button>
       </div>
 
     </div>
 
-  </div>
 
   <span><i>event: <%= JSON.stringify(event) %></i></span>
   <span><i>team: <%= JSON.stringify(team) %></i></span>

@@ -9,12 +9,30 @@
     <%- include('../../partials/navbar.ejs') %>
 
     <div class="main">
-
-      <div class='row toprow'>
-
+      <div class="row toprow">
         <div class='section-title'>
-          <h3>Explore All Teams</h3>
+          <h3>Your teams: </h3>
         </div>
+      </div>
+      <div class="row cardrow">
+        <!--display this section when no teams are available-->
+        <div class="section-nodata">
+          <p>no teams yet</p>
+        </div>
+        <!--display this section when teams are created by user-->
+        <!--<div class='section-cards'>
+        </div>-->
+      </div>
+
+
+
+
+        <div class="row toprow">
+          <div class='section-title'>
+            <h3>Explore all teams: </h3>
+          </div>
+        </div>
+        <div class='row cardrow'>
         <% if (teams.length > 0) { %>
         <div class='section-cards'>
           <% for (let team of teams ) { %>
@@ -24,10 +42,6 @@
         <% } else { %>
         <h1>No Teams Yet.</h1>
         <% } %>
-        <div>
-          <a href="">See more...</a>
-        </div>
-
       </div>
 
     </div>

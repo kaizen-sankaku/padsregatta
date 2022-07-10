@@ -11,14 +11,47 @@
     <div class="main">
 
       <div class='row toprow'>
-        <h3><%= event.name %></h3>
-        <span><%= event.date %></span>
-        <span><%= event.description %></span>
-        <div class='section-title'></div>
-        <div class='section-cards'></div>
-        <br>
-        <span>Registered teams:</span>
-        <span>Information Bulletins:</span>
+        <button class='button float'>Join event</button>
+        <h3 class="section-title"><%= event.name %></h3>
+        <span class="section-subtitle"><%= event.date %></span>
+        <span class="event-description"><%= event.description %></span>
+      </div>
+
+      <div class='row toprow'>
+        <div class='section-subtitle'>
+          <span><b>Event categories:</b></span>
+        </div>
+      </div>
+
+      <div class='row cardrow'>
+        <!--display this section when no event category is available-->
+        <!--<div class="section-nodata">
+          <p>no event categories</p>
+        </div>-->
+        <div class='section-cards'>
+          <%- include('../../partials/event-category-card.ejs') %>
+          <%- include('../../partials/event-category-card.ejs') %>
+        </div>
+      </div>
+
+      <div class='row toprow'>
+        <div class='section-subtitle'>
+          <span><b>Teams registered: </b></span>
+        </div>
+      </div>
+
+      <div class="row cardrow">
+        <!--display this section when no teams are registered-->
+        <div class="section-nodata">
+          <p>no team registered yet</p>
+        </div>
+
+        <!--display this section once teams are registered-->
+        <!--<div class='section-cards'>
+          <%- include('../../partials/event-card.ejs') %>
+          <%- include('../../partials/event-card.ejs') %>
+        </div>-->
+
       </div>
 
     </div>

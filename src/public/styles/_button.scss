@@ -19,6 +19,7 @@
   text-decoration: none;
   font-size: 0.5em;
   border-radius: 4px;
+  margin-top: 20px;
   background: linear-gradient(to right, #005c97, #363795);
 }
 
@@ -35,10 +36,16 @@ button:hover {
   // background-color: #ab6df7;
   background: linear-gradient(to right, #005c97, #363795);
   float: right;
-  margin-right: 200px;
-  max-width: 20%;
-  height: 50px;
-  font-size: 0.7em;
+  margin-right: 0;
+  max-width: 150px;
+  height: 40px;
+  font-size: 0.5em;
+}
+
+@media screen and (max-width: 800px) {
+  .float {
+    max-width: 40%;
+  }
 }
 
 .join {

@@ -13,8 +13,6 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  background-color: #f3f2f5;
-  display: flexbox;
   align-items: center;
   justify-content: center;
   position: relative;
@@ -31,22 +29,35 @@ h3 {
 /* sections */
 
 .main {
-  margin-left: 160px; /* Same as the width of the sidenav */
-  font-size: 28px; /* Increased text to enable scrolling */
+  font-size: 28px;
   padding: 10px;
+  margin: auto;
+  position: relative;
 }
 
 /* Clear floats after the columns */
 .row {
   content: '';
-  display: table;
   clear: both;
-  height: 40vh;
-  width: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
+  position: relative;
 }
 
 .toprow {
-  margin-top: 40px;
+  margin-top: 50px;
+}
+
+.section-title {
+  font-size: 1em;
+}
+
+.section-subtitle {
+  font-size: 0.8em;
+}
+
+.event-description {
+  font-size: 0.8em;
 }
 
 @media screen and (max-height: 450px) {
@@ -69,5 +80,14 @@ h3 {
   input[type='submit'] {
     width: 100%;
     margin-top: 0;
+  }
+
+  .section-title {
+    font-size: 0.7em;
+  }
+
+  .section-subtitle,
+  .event-description {
+    font-size: 0.6em;
   }
 }

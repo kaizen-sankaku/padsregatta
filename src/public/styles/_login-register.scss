@@ -1,21 +1,31 @@
 /* login */
 .login {
-  display: inline-flex;
+  display: flex;
   position: relative;
-  width: 50%;
+  width: 80%;
   height: 100%;
-  margin: 5%;
-  margin-left: 15%;
+  margin: auto;
+  margin-top: 30px;
 }
 
 .card-login {
   transition: 0.3s;
-  width: 100%;
+  width: 80%;
   border-radius: 5px;
   padding: 30px;
   background-color: white;
   border: solid 1px rgba(#dbdad7, 0.5);
   box-shadow: 3px rgba(#dbdad7, 0.5);
+}
+
+@media screen and (max-width: 1000px) {
+  .login {
+    display: block;
+  }
+
+  .card-login {
+    margin-top: 10px;
+  }
 }
 
 .header {
