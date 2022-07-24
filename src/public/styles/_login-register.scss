@@ -18,6 +18,15 @@
   box-shadow: 3px rgba(#dbdad7, 0.5);
 }
 
+.card-profile {
+  transition: 0.3s;
+  width: 80%;
+  border-radius: 5px;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 3px rgba(#dbdad7, 0.5);
+}
+
 @media screen and (max-width: 1000px) {
   .login {
     display: block;

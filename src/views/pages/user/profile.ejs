@@ -8,11 +8,96 @@
 
     <%- include('../../partials/navbar.ejs') %>
 
+    <!--USER PROFILE-->
     <div class="main">
-      <h1>User Profile</h1>
-      <span><%= user.name %></span>
-      <br>
+      <div class="login">
+        <div class="card-profile">
+          <div>
+            <p class="header">Fill the form to join the event</p>
+          </div>
+
+          <div class="card-login-body">
+            <!--YOUR TEAMS SECTION START-->
+            <form id="myForm" action = "connect.php" method = "post">
+
+              <div class='form-row toprow'>
+                <h3 class="section-title">Event name</h3>
+                <span class="section-subtitle">Event Date</span>
+                <span class="event-description">Details</span>
+              </div>
+
+              <div class='form-group'>
+                <div class='category'>
+                  <input
+                    type='checkbox'
+                    id='category1'
+                    name='category1'
+                    value='category1'
+                  />
+                  <label for='eventDetails'>Category 1</label>
+
+                </div>
+
+                <div class='category'>
+                  <input
+                    type='checkbox'
+                    id='category2'
+                    name='category2'
+                    value='category2'
+                  />
+                  <label for='eventDetails'>Category 2</label>
+                  <textarea
+                    type='text'
+                    id='teammate1'
+                    name='teammate1'
+                    placeholder='Enter team members (separate by line)'
+                  ></textarea>
+                </div>
+
+                <div class='category'>
+                  <input
+                    type='checkbox'
+                    id='category3'
+                    name='category3'
+                    value='category3'
+                  />
+                  <label for='eventDetails'>Category 3</label>
+                  <textarea
+                    type='text'
+                    id='teammate1'
+                    name='teammate1'
+                    placeholder='Enter team members (separate by line)'
+                  ></textarea>
+                </div>
+
+                <div class='category'>
+                  <input
+                    type='checkbox'
+                    id='category4'
+                    name='category4'
+                    value='category4'
+                  />
+                  <label for='eventDetails'>Category 4</label>
+                  <textarea
+                    type='text'
+                    id='teammate1'
+                    name='teammate1'
+                    placeholder='Enter team members (separate by line)'
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class='form-row'>
+                <input class='save' type='submit' value='Submit Details' />
+              </div>
+
+            </form>
+      <!--JOIN A TEAM SECTION END-->
+          </div>
+        </div>
+      </div>
     </div>
+    <!--USER PROFILE-->
 
   </div>
 

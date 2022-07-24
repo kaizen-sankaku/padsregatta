@@ -15,13 +15,15 @@
         </div>
       </div>
       <div class="row cardrow">
-        <!--display this section when no teams are available-->
-        <div class="section-nodata">
-          <p>no teams yet</p>
-        </div>
-        <!--display this section when teams are created by user-->
-        <!--<div class='section-cards'>
-        </div>-->
+        <% if (teams.length > 0) { %>
+          <div class='section-cards'>
+            <% for (let team of teams ) { %>
+            <%- include('../../partials/team-card.ejs', {team: team}) %>
+            <% } %>
+          </div>
+          <% } else { %>
+          <h1>No Teams Yet.</h1>
+          <% } %>
       </div>
 
 
@@ -36,7 +38,7 @@
         <% if (teams.length > 0) { %>
         <div class='section-cards'>
           <% for (let team of teams ) { %>
-          <%- include('../../partials/team-card.ejs', {team: team}) %>
+          <%- include('../../partials/other-team-card.ejs', {team: team}) %>
           <% } %>
         </div>
         <% } else { %>

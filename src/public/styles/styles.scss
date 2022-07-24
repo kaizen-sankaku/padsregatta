@@ -16,6 +16,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: auto;
 }
 
 span {
@@ -46,6 +47,7 @@ h3 {
 
 .toprow {
   margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .section-title {
@@ -90,4 +92,19 @@ h3 {
   .event-description {
     font-size: 0.6em;
   }
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
 }

@@ -1,0 +1,56 @@
+<%- include('../../partials/head.ejs') %>
+
+</head>
+
+<body>
+
+  <div id='app'>
+
+    <%- include('../../partials/navbar.ejs') %>
+
+    <!--USER PROFILE-->
+    <div class="main">
+      <div class="login">
+        <div class="card-profile">
+          <div>
+            <p class="header">Edit your profile</p>
+          </div>
+
+          <div class="card-login-body">
+            <form id="myForm" action = "connect.php" method = "post">
+              <div class=form-group>
+                <label for="fname">First Name</label></br>
+                <input id="fname" name = "fname" type="text" required>
+              </div>
+
+              <div class=form-group>
+                <label for="lname">Last Name</label></br>
+                <input id="lname" name = "lname" type="text" required>
+
+              </div>
+
+              <div class=form-group>
+                <label for="email">Email</label></br>
+                <input id="email" name = "email" type="text" required>
+
+              </div>
+
+              <div class=form-group>
+                <label for="password">Password</label></br>
+                <input id="password" name = "password" type="password" required>
+
+              </div>
+
+              <button class="button-login" type="submit" onclick="submitForm">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--USER PROFILE-->
+
+  </div>
+
+  <span><i>user: <%= JSON.stringify(user) %></i></span>
+
+  <%- include('../../partials/footer.ejs') %>
